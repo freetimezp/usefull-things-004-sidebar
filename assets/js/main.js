@@ -1,16 +1,20 @@
 /*=============== SHOW SIDEBAR ===============*/
-const showSidebar = (toggleId, sidebarId) => {
+const showSidebar = (toggleId, sidebarId, headerId, mainId) => {
     const toggle = document.getElementById(toggleId);
     const sidebar = document.getElementById(sidebarId);
+    const header = document.getElementById(headerId);
+    const main = document.getElementById(mainId);
 
-    if (toggle && sidebar) {
+    if (toggle && sidebar && header && main) {
         toggle.addEventListener('click', () => {
             sidebar.classList.toggle('show-sidebar');
+            header.classList.toggle('left-pd');
+            main.classList.toggle('left-pd');
         });
     }
 };
 
-showSidebar('header-toggle', 'sidebar');
+showSidebar('header-toggle', 'sidebar', 'header', 'main');
 
 /*=============== LINK ACTIVE ===============*/
 const sidebarLink = document.querySelectorAll('.sidebar__list a');
