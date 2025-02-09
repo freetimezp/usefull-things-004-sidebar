@@ -270,7 +270,18 @@ button {
 }
 
 /* Active link */
+.active-link {
+  color: var(--first-color);
+}
 
+.active-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 3px;
+  height: 20px;
+  background-color: var(--first-color);
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
